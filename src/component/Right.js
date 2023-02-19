@@ -9,7 +9,7 @@ import Content3 from "./Content3";
 import Content4 from "./Content4";
 
 const Right = () =>{
-    return <div className='Right'>
+    return <>
         <FixedStyle>
             <FixedContent1 />
             <FixedContent2 />
@@ -23,7 +23,7 @@ const Right = () =>{
             <Content3 />
             <Content4 />
         </ContentStyle>
-    </div>
+    </>
 };
 
 const FixedStyle = styled.div`

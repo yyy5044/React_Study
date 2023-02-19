@@ -1,15 +1,19 @@
 import styled from "styled-components";
+import content from "../img/FixedContent.png"
 
 const FixedContent2 = () =>{
-    return <div className='FixedContent2'>
-        <Box>FixedContent2</Box>
-    </div>
+    return <>
+        <Box>
+          <img src={content} width="230px" height="120px"></img>
+        </Box>
+    </>
 };
 
 const Box = styled.div`
   height: 120px;
   width: 230px;
   border: 2px solid;
+  margin: 10px 10px 10px 10px;
   background-color: #00ffff;
 `;
 

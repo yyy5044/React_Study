@@ -1,15 +1,15 @@
 import styled from "styled-components";
-import Title from "./Title";
 import SNS1 from "./SNS1";
 import SNS2 from "./SNS2";
 import SNS3 from "./SNS3";
-import SNS4 from "./SNS3";
+import SNS4 from "./SNS4";
 
 const Left = () => {
-    return <div className="Left">
+    return <>
         <TitleStyle>
             <TitleFontStyle>
-                <Title />
+              LR의<br />
+              IT블로그
             </TitleFontStyle>
         </TitleStyle>
         <Border />
@@ -19,7 +19,7 @@ const Left = () => {
             <SNS3 />
             <SNS4 />
         </SnsStyle>
-    </div>;
+    </>;
 }
 
 const TitleStyle = styled.div`

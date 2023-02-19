@@ -6,7 +6,6 @@ import Right from './component/Right';
 
 const App = () => {
   return (
-    <div className="App">
       <TitleContainer>
         <LeftStyle>
           <Left />
@@ -15,28 +14,32 @@ const App = () => {
           <Right />
         </RightStyle>
       </TitleContainer>
-    </div>
   );
 }
 
 const TitleContainer = styled.div`
   display: flex;
   flex-direction: row;
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
 `;
 
 const LeftStyle = styled.div`
-  height: 1000px;
-  width: 30%;
+  position: fixed;
+
+  height: 100vh;
+  width: 30vw;
 
   background-color: #0000ff;
 `;
 
 const RightStyle = styled.div`
-  height: 100px;
-  width: 70%;
+  height: 100vh;
+  width: 100vw;
   
+  justify-content: flex-end;
   margin: 10px 50px 30px 50px;
+  padding: 0px 0px 0px 30vw;
   background-color: #ffffff;
 `;
 

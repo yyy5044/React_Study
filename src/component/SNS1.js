@@ -1,14 +1,17 @@
 import styled from "styled-components";
+import content from "../img/github.png"
 
 const SNS1 = () => {
-    return <div className="SNS1">
-        <Box />
-    </div>;
+    return <>
+        <Box>
+        <img src={content} width="40px" height="40px"></img>
+        </Box>
+    </>
 }
 
 const Box = styled.div`
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   background-color: #ffffff;
 `;
 
