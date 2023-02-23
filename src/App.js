@@ -1,46 +1,21 @@
 import './App.css';
-import styled from "styled-components";
-import Left from './component/Left';
-import Right from './component/Right';
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home";
+import PostView from "./Pages/PostView";
+import Header from "./Common/Header";
 
 const App = () => {
   return (
-      <TitleContainer>
-        <LeftStyle>
-          <Left />
-        </LeftStyle>
-        <RightStyle>
-          <Right />
-        </RightStyle>
-      </TitleContainer>
+    <BrowserRouter>
+      <Routes>
+        <Route element={ <Header/> }>
+          <Route path="/" element={ <Home/> } />
+          <Route path="/postview/:postID" element={ <PostView/> } />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+    
   );
 }
-
-const TitleContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-  width: 100vw;
-`;
-
-const LeftStyle = styled.div`
-  position: fixed;
-
-  height: 100vh;
-  width: 30vw;
-
-  background-color: #0000ff;
-`;
-
-const RightStyle = styled.div`
-  height: 100vh;
-  width: 100vw;
-  
-  justify-content: flex-end;
-  margin: 10px 50px 30px 50px;
-  padding: 0px 0px 0px 30vw;
-  background-color: #ffffff;
-`;
 
 export default App;
